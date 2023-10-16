@@ -23,7 +23,7 @@ const AddCoffee = () => {
       photo,
     };
     console.log(newCoffee);
-    fetch('http://localhost:5000/coffee', {
+    fetch('https://coffee-store-server-bnor88gbc-ruma1.vercel.app/coffee', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

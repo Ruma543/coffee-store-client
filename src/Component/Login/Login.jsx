@@ -21,7 +21,7 @@ const Login = () => {
           lastSignInTime: result.user?.metadata?.lastSignInTime,
         };
         console.log(user);
-        fetch('http://localhost:5000/user', {
+        fetch('https://coffee-store-server-bnor88gbc-ruma1.vercel.app/user', {
           method: 'PATCH',
           headers: {
             'content-type': 'application/json',

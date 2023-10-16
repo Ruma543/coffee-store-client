@@ -15,13 +15,16 @@ const UpdateUser = () => {
     const photo = form.get('photo');
     const newUser = { name, email, photo };
     // console.log(newUser);
-    fetch(`http://localhost:5000/user/${_id}`, {
-      method: 'PUT',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(newUser),
-    })
+    fetch(
+      `https://coffee-store-server-bnor88gbc-ruma1.vercel.app/user/${_id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+      }
+    )
       .then(res => res.json())
       .then(data => {
         console.log(data);
